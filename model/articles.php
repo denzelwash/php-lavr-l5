@@ -14,8 +14,16 @@
 		return $query->rowCount();
 	}
 
-	function getArticles(){
+	function getAllArticles(){
 		$sql = "SELECT * FROM articles";
+		$query = dbQuery($sql);
+		dbCheckQuery($query);
+		$result = $query->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
+	function getCategoryArticles($id){
+		$sql = "SELECT * FROM articles WHERE id_category = $id";
 		$query = dbQuery($sql);
 		dbCheckQuery($query);
 		$result = $query->fetchAll(PDO::FETCH_ASSOC);

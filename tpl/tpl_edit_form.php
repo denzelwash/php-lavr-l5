@@ -10,11 +10,11 @@
 				<? else : ?>
 					<option value="0">Без категории</option>
 				<? endif;?>
-				<? foreach($cats as $cat) : ?>
-					<? if($cat['id_category'] === $catId) : ?>
-						<option value="<?=$cat['id_category']?>" selected><?=$cat['title']?></option>
+				<? foreach($cats as $c) : ?>
+					<? if($c['id_category'] === $cat['id_category']) : ?>
+						<option value="<?=$c['id_category']?>" selected><?=$cat['title']?></option>
 					<? else : ?>
-						<option value="<?=$cat['id_category']?>"><?=$cat['title']?></option>
+						<option value="<?=$c['id_category']?>"><?=$c['title']?></option>
 					<? endif;?>
 				<? endforeach; ?>
 			</select>

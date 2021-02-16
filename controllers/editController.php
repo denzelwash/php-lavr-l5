@@ -1,8 +1,5 @@
 <?php
 
-	include_once('model/articles.php');
-	include_once('model/categories.php');
-
 	$strId = $_GET['id'] ?? '';
 	$id = (int)$strId;
 	$isSend = false;
@@ -25,10 +22,19 @@
 		$article = getArticle($id);
 		$title = $article['title'];
 		$content = $article['text'];
-		$catId = $article['id_category'];
 		$cats = getCategories();
+		$cat = getCategory($article['id_category']);
 	}
 
-	include_once('tpl/tpl_edit_form.php');
+	$pageTitle = 'Добавить Запись';
+	$pageContent = template('tpl_edit_form', [
+		'isSend' => $isSend,
+		'addedId' => $addedId,
+		'cats' => $cats,
+		'cat' => $cat,
+		'article' => $article,
+		'content' => $content,
+		'title' => $title,
+	]);
 
 ?>

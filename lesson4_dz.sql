@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 10 2021 г., 12:37
+-- Время создания: Фев 16 2021 г., 23:14
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.3.17
 
@@ -40,12 +40,12 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id_article`, `id_category`, `title`, `text`, `date`) VALUES
-(1, 0, 'Первая статья', 'Описание у первой статьи, Бла бла бла', '2021-02-02 09:34:24'),
-(2, 0, 'Вторая статья', 'Описание у второй статьи, Бла бла бла', '2021-02-02 09:34:24'),
-(17, 2, 'Планета', '2', '2021-02-04 05:06:25'),
+(17, 0, 'Планета', '2', '2021-02-04 05:06:25'),
 (22, 3, 'Еще одна статья', 'Тест', '2021-02-09 15:11:04'),
 (23, 3, 'Последняя статья', 'Последняя статья описание', '2021-02-10 09:01:02'),
-(24, 0, 'Hack', '&lt;/textarea&gt;&lt;h1&gt;Ку&lt;/h1&gt;', '2021-02-10 09:09:35');
+(24, 1, 'Hack', '&lt;/textarea&gt;&lt;h1&gt;Ку&lt;/h1&gt;', '2021-02-10 09:09:35'),
+(25, 3, 'Опа1', 'Статья опа жопа', '2021-02-16 16:35:16'),
+(26, 0, 'Эбола в Африке', 'Пиздец', '2021-02-16 20:11:51');
 
 -- --------------------------------------------------------
 
@@ -64,6 +64,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id_category`, `title`, `url`) VALUES
+(0, 'Без названия', 'none'),
 (1, 'Про секс', 'sex'),
 (2, 'Мир', 'world'),
 (3, 'Техника', 'tech');
@@ -93,13 +94,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -10,7 +10,7 @@
     return $result;
   }
 
-  function getCategory($id){
+  function getCategory(string $id){
     $sql = "SELECT * FROM categories WHERE id_category = $id";
     $query = dbQuery($sql);
     dbCheckQuery($query);

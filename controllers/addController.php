@@ -1,7 +1,4 @@
 <?php
-
-	include_once('model/articles.php');
-	include_once('model/categories.php');
   
 	$isSend = false;
 	$err = '';
@@ -25,6 +22,11 @@
 		$cats = getCategories();
 	}
 
-	include_once('tpl/tpl_add_form.php');
+	$pageTitle = 'Добавить Запись';
+	$pageContent = template('tpl_add_form', [
+		'isSend' => $isSend,
+		'addedId' => $addedId,
+		'cats' => $cats,
+	]);
 
 ?>
