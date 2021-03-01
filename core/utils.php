@@ -1,5 +1,7 @@
 <?php
 
+const BASE_URL = '/';
+
 function template(string $name, array $params = []) : string {
   $str = "tpl/$name.php";
   extract($params);

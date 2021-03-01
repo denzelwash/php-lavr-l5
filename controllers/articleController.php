@@ -6,7 +6,6 @@
 	$post = getArticle($id);
 	if (is_array($post)) {
 		$cat = getCategory($post['id_category']);
-		$catTitle = getCategory($post['id_category'])['title'];
 		$pageTitle = 'Запись';
 		$pageContent = template('tpl_article', [
 			'post' => $post,

@@ -1,7 +1,7 @@
 <div class="form">
 	<? if($isSend): ?>
 		<p>Your article is done!</p><br>
-		<a href="index.php?c=article&id=<?=$addedId;?>">Move to article</a>
+		<a href="<?=BASE_URL?>article/id=<?=$addedId;?>">Move to article</a>
 	<? else: ?>
 		<form method="post">
 			Category<br>
@@ -24,4 +24,4 @@
 	<? endif; ?>
 </div>
 <hr>
-<a href="index.php">Move to main page</a>
+<a href="<?=BASE_URL?>">Move to main page</a>

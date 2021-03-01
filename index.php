@@ -3,7 +3,6 @@
 include_once('model/articles.php');
 include_once('model/categories.php');
 include_once('core/utils.php');
-
 $name = $_GET['c'] ?? 'index';
 $pathFull = 'controllers/' . $name .'Controller.php';
 $pageTitle = 'Project';

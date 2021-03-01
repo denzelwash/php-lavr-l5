@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Фев 16 2021 г., 23:14
--- Версия сервера: 10.3.22-MariaDB
--- Версия PHP: 7.3.17
+-- Host: 127.0.0.1:3306
+-- Generation Time: Mar 01, 2021 at 09:57 PM
+-- Server version: 10.3.22-MariaDB
+-- PHP Version: 7.3.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `lesson4_dz`
+-- Database: `lesson4_dz`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `articles`
+-- Table structure for table `articles`
 --
 
 CREATE TABLE `articles` (
@@ -36,7 +36,7 @@ CREATE TABLE `articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `articles`
+-- Dumping data for table `articles`
 --
 
 INSERT INTO `articles` (`id_article`, `id_category`, `title`, `text`, `date`) VALUES
@@ -45,12 +45,13 @@ INSERT INTO `articles` (`id_article`, `id_category`, `title`, `text`, `date`) VA
 (23, 3, 'Последняя статья', 'Последняя статья описание', '2021-02-10 09:01:02'),
 (24, 1, 'Hack', '&lt;/textarea&gt;&lt;h1&gt;Ку&lt;/h1&gt;', '2021-02-10 09:09:35'),
 (25, 3, 'Опа1', 'Статья опа жопа', '2021-02-16 16:35:16'),
-(26, 0, 'Эбола в Африке', 'Пиздец', '2021-02-16 20:11:51');
+(26, 0, 'Эбола в Африке', 'Пиздец', '2021-02-16 20:11:51'),
+(27, 0, '2', '+++', '2021-03-01 04:52:09');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -60,7 +61,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id_category`, `title`, `url`) VALUES
@@ -70,34 +71,34 @@ INSERT INTO `categories` (`id_category`, `title`, `url`) VALUES
 (3, 'Техника', 'tech');
 
 --
--- Индексы сохранённых таблиц
+-- Indexes for dumped tables
 --
 
 --
--- Индексы таблицы `articles`
+-- Indexes for table `articles`
 --
 ALTER TABLE `articles`
   ADD PRIMARY KEY (`id_article`),
   ADD KEY `id_category` (`id_category`);
 
 --
--- Индексы таблицы `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id_category`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `articles`
+-- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT для таблицы `categories`
+-- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

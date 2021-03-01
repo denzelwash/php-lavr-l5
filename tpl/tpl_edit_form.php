@@ -31,4 +31,4 @@
 	<? endif; ?>
 </div>
 <hr>
-<a href="index.php">Move to main page</a>
+<a href="<?=BASE_URL?>">Move to main page</a>
