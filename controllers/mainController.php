@@ -1,8 +1,8 @@
 <?php
-	
-	$articles = getAllArticles();
 
-	$pageTitle = 'Главная';
-	$pageContent = template('tpl_index', [
-		'articles' => $articles
-	]);
+$articles = getAllArticles();
+
+$pageTitle = 'Главная';
+$pageContent = template('tpl_index', [
+	'articles' => $articles
+]);

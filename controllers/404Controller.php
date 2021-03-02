@@ -1,6 +1,4 @@
 <?php
 
-	$pageTitle = 'Страница не найдена';
-	$pageContent = template('tpl_404');
-
-?>
+$pageTitle = 'Страница не найдена';
+$pageContent = template('tpl_404');
