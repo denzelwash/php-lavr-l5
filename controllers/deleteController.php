@@ -1,6 +1,6 @@
 <?php
 
-	$id = (int)($_GET['id'] ?? '');
+	$id = (int)(URL_PARAMS['id'] ?? '');
 	$res = removeArticle($id);
 
 	$pageTitle = 'Удалить запись';

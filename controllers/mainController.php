@@ -6,7 +6,3 @@
 	$pageContent = template('tpl_index', [
 		'articles' => $articles
 	]);
-
-?>
-
-	

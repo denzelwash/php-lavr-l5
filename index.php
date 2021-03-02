@@ -3,10 +3,18 @@
 include_once('model/articles.php');
 include_once('model/categories.php');
 include_once('core/utils.php');
-$name = $_GET['c'] ?? 'index';
-$pathFull = 'controllers/' . $name .'Controller.php';
+
+$url = $_GET['mainurl'] ?? '';
+$routes = include('core/routes.php');
+$route = parseUrl($url, $routes);
+var_dump($route);
+
+define('URL_PARAMS', $route['params']);
+
+$pathFull = 'controllers/' . $route['controller'] .'Controller.php';
 $pageTitle = 'Project';
 $pageContent = '';
+
 
 if(file_exists($pathFull)) {
   include_once($pathFull);

@@ -1,6 +1,6 @@
 <?php
 
-	$strId = $_GET['id'] ?? '';
+	$strId = URL_PARAMS['id'] ?? '';
 	$id = (int)$strId;
 	$isSend = false;
 	$err = '';
