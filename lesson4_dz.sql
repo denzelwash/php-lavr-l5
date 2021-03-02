@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Mar 01, 2021 at 09:57 PM
--- Server version: 10.3.22-MariaDB
--- PHP Version: 7.3.17
+-- Хост: 127.0.0.1:3306
+-- Время создания: Мар 02 2021 г., 17:25
+-- Версия сервера: 10.3.22-MariaDB
+-- Версия PHP: 7.3.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lesson4_dz`
+-- База данных: `lesson4_dz`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `articles`
+-- Структура таблицы `articles`
 --
 
 CREATE TABLE `articles` (
@@ -36,22 +36,21 @@ CREATE TABLE `articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `articles`
+-- Дамп данных таблицы `articles`
 --
 
 INSERT INTO `articles` (`id_article`, `id_category`, `title`, `text`, `date`) VALUES
-(17, 0, 'Планета', '2', '2021-02-04 05:06:25'),
-(22, 3, 'Еще одна статья', 'Тест', '2021-02-09 15:11:04'),
-(23, 3, 'Последняя статья', 'Последняя статья описание', '2021-02-10 09:01:02'),
+(17, 1, 'Планета', '2', '2021-02-04 05:06:25'),
+(22, 3, 'Еще одна', 'Тест 2213', '2021-02-09 15:11:04'),
 (24, 1, 'Hack', '&lt;/textarea&gt;&lt;h1&gt;Ку&lt;/h1&gt;', '2021-02-10 09:09:35'),
 (25, 3, 'Опа1', 'Статья опа жопа', '2021-02-16 16:35:16'),
-(26, 0, 'Эбола в Африке', 'Пиздец', '2021-02-16 20:11:51'),
-(27, 0, '2', '+++', '2021-03-01 04:52:09');
+(26, 4, 'Эбола в Африке', 'Пиздец', '2021-02-16 20:11:51'),
+(32, 4, 'Бали', 'sadas', '2021-03-02 14:24:13');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Структура таблицы `categories`
 --
 
 CREATE TABLE `categories` (
@@ -61,44 +60,44 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `categories`
+-- Дамп данных таблицы `categories`
 --
 
 INSERT INTO `categories` (`id_category`, `title`, `url`) VALUES
-(0, 'Без названия', 'none'),
-(1, 'Про секс', 'sex'),
-(2, 'Мир', 'world'),
-(3, 'Техника', 'tech');
+(1, 'Без названия', 'none'),
+(2, 'Про секс', 'sex'),
+(3, 'Мир', 'world'),
+(4, 'Техника', 'tech');
 
 --
--- Indexes for dumped tables
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `articles`
+-- Индексы таблицы `articles`
 --
 ALTER TABLE `articles`
   ADD PRIMARY KEY (`id_article`),
   ADD KEY `id_category` (`id_category`);
 
 --
--- Indexes for table `categories`
+-- Индексы таблицы `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id_category`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT for table `articles`
+-- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
