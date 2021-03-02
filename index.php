@@ -7,7 +7,6 @@ include_once('core/utils.php');
 $url = $_GET['mainurl'] ?? '';
 $routes = include('core/routes.php');
 $route = parseUrl($url, $routes);
-var_dump($route);
 
 define('URL_PARAMS', $route['params']);
 
