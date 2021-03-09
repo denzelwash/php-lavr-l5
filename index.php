@@ -1,8 +1,19 @@
 <?php
 
+session_start();
 include_once('model/articles.php');
 include_once('model/categories.php');
+include_once('model/auth.php');
 include_once('core/utils.php');
+
+$token = $_SESSION['token'] ?? $_COOKIE['token'] ?? null;
+$user = null;
+if ($token !== null) {
+	$session = getSession($token);
+	if ($session !== null) {
+		$user = getUserById($session['id_user']);
+	}
+}
 
 $url = $_GET['mainurl'] ?? '';
 $routes = include('core/routes.php');
@@ -23,7 +34,8 @@ if (file_exists($pathFull)) {
 
 $mainTemplate = template('base/tpl_main', [
 	'title' => $pageTitle,
-	'content' => $pageContent
+	'content' => $pageContent,
+	'user' => $user,
 ]);
 
 echo $mainTemplate;

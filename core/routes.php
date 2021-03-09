@@ -10,6 +10,14 @@ return [
 		'controller' => 'add'
 	],
 	[
+		'test' => '/^login$/',
+		'controller' => 'login'
+	],
+	[
+		'test' => '/^logout$/',
+		'controller' => 'logout'
+	],
+	[
 		'test' => '/^article\/([1-9]+\d*)$/',
 		'controller' => 'article',
 		'params' => ['id' => 1]

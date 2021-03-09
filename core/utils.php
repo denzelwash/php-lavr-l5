@@ -31,6 +31,5 @@ function parseUrl(string $url, array $routes): array
 		}
 	}
 
-
 	return $res;
 }

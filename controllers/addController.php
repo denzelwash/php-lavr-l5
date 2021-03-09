@@ -1,5 +1,10 @@
 <?php
 
+if ($user === null) {
+	header('Location: ' . BASE_URL . 'login');
+	exit();
+}
+
 $isSend = false;
 $err = '';
 

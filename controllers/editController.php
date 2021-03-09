@@ -1,5 +1,10 @@
 <?php
 
+if ($user === null) {
+	header('Location: ' . BASE_URL . 'login');
+	exit();
+}
+
 $strId = URL_PARAMS['id'] ?? '';
 $id = (int)$strId;
 $isSend = false;

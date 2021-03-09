@@ -44,6 +44,13 @@
 						<li class="nav-item">
 							<a class="nav-link" href="<?= BASE_URL ?>add">Add</a>
 						</li>
+						<li class="nav-item">
+							<?php if ($user === null) : ?>
+								<a class="nav-link" href="<?= BASE_URL ?>login">Login</a>
+							<?php else : ?>
+								<a class="nav-link" href="<?= BASE_URL ?>logout">Logout</a>
+							<?php endif; ?>
+						</li>
 					</ul>
 				</div>
 			</nav>
